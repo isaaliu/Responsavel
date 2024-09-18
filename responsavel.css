@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap');
+
+.new-amsterdam-regular {
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    --color1: rgba(108, 231, 221, 0.719);
+    --color2: rgb(178, 229, 255);
+    background-color: var(--color1);
+    background-image: linear-gradient(45deg, var(--color2) 25%, transparent 25%, transparent 75%, var(--color2) 75%, var(--color2)), 
+                      linear-gradient(45deg, var(--color2) 25%, var(--color1) 25%, var(--color1) 75%, var(--color2) 75%, var(--color2));
+    background-size: 60px 60px;
+    background-position: 0 0, 30px 30px;
+  }
+
+
+/*HEADER*/
+/* Estilo do menu de navegação */
+nav {
+    background-color: #ffffff;
+    padding: 10px 0;
+    box-shadow: 0px 8px 16px 0px rgb(24, 255, 255);
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+    top: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: left;
+}
+
+nav ul li {
+    position: relative; /* Necessário para o posicionamento do dropdown */
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: rgb(103, 227, 255);
+    text-decoration: none;
+    font-size: 1.5em;
+    padding: 10px;
+    display: block; /* Torna o link clicável em toda a área */
+    transition: color 0.3s;
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+nav ul li a:hover {
+    color: #037ad4;
+}
+
+/* Estilo do dropdown */
+nav ul li .dropdown-content {
+    display: none; /* Esconde o submenu inicialmente */
+    position: absolute; /* Posiciona o submenu em relação ao item pai */
+    background-color: #000000;
+    box-shadow: 0px 8px 16px 0px rgb(0, 0, 0);
+    z-index: 1; /* Garante que o submenu fique acima de outros elementos */
+    min-width: 160px;
+    padding: 0;
+}
+
+nav ul li .dropdown-content li {
+    margin: 0;
+}
+
+nav ul li .dropdown-content li a {
+    padding: 10px 15px;
+}
+
+nav ul li .dropdown-content li a:hover {
+    background-color: #2472b757; /* Cor de fundo ao passar o mouse sobre o submenu */
+}
+
+/* Exibe o submenu ao passar o mouse sobre o item principal */
+nav ul li:hover .dropdown-content {
+    display: block;
+}
+
+
+
+
+/* From Uiverse.io by Praashoo7 */ 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-bottom: 0.4em;
+  background-color: #062c497b;
+  border-radius: 25px;
+  transition: .4s ease-in-out;
+  max-width: 400px;
+  margin: 20vh auto;
+  font-size: 18px;
+  opacity: 0.8;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  font-family: "New Amsterdam";
+}
+.form a img{
+  width: 20%;
+  margin-top: 20px;
+  border-radius: 100px;
+  border: 0px;
+}
+
+form:hover {
+  gap: 30px;
+  transform: scale(1.02);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+#heading {
+  text-align: center;
+  margin: 0.4em;
+  color: rgb(255, 255, 255);
+  font-size: 1.5em;
+  font-family: "New Amsterdam";
+  font-weight: 400;
+  font-style: normal;
+}
+
+.field {
+  margin: 8px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 2.0em;
+  border-radius: 25px;
+  padding: 0.2em;
+  border: none;
+  outline: none;
+  color: white;
+  background-color: #d6d6d667;
+  box-shadow: inset 2px 5px 10px rgb(5, 5, 5);
+  padding: 10px;
+  font-family: "New Amsterdam";
+
+}
+
+input{
+  padding: 10px;
+  background: none;
+  border: none;
+  outline: none;
+  width: 90%;
+  color: #d3d3d3;
+  font-family: "New Amsterdam";
+  font-size: 16px;
+}
+
+button {
+  align-items: center;
+  background-image: linear-gradient(144deg, #af40ff, #5b42f3 50%, #00ddeb);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgb(152, 65, 252) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #ffffff;
+  display: flex;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:active,
+button:hover {
+  outline: 0;
+}
+
+button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+button:hover span {
+  background: none;
+}
+
+button:active {
+  transform: scale(0.9);
+}
+
+ 
+ @keyframes slidernbw {
+  to {
+   background-position: 20vw;
+  }
+ }
+
+ 
+.input-icon {
+  height: 1.3em;
+  width: 1.3em;
+  fill: white;
+}
+
+.input-field {
+  font-family: "New Amsterdam";
+  background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  color: #d3d3d3;
+}
+   /* @import url('https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap'); *
+
+.new-amsterdam-regular {
+    font-family: "New Amsterdam", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+        width: 100%;
+        height: 100%;
+        --color: rgba(114, 114, 114, 0.3);
+        background-color: #191a1a;
+        background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
+            linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+        background-size: 55px 55px;
+      }
+ 
+ */
